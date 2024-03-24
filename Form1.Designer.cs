@@ -35,6 +35,7 @@
             scientficToolStripMenuItem = new ToolStripMenuItem();
             tempratureToolStripMenuItem = new ToolStripMenuItem();
             unitConversionToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
             editToolStripMenuItem = new ToolStripMenuItem();
             viewToolStripMenuItem = new ToolStripMenuItem();
             btnBS = new Button();
@@ -53,26 +54,31 @@
             btn2 = new Button();
             btn3 = new Button();
             btnMult = new Button();
-            button17 = new Button();
-            button18 = new Button();
-            button19 = new Button();
-            button20 = new Button();
-            button21 = new Button();
-            button22 = new Button();
-            button23 = new Button();
-            button24 = new Button();
-            button25 = new Button();
-            button26 = new Button();
-            button27 = new Button();
-            button28 = new Button();
-            button29 = new Button();
-            button30 = new Button();
-            button31 = new Button();
-            button32 = new Button();
             btn0 = new Button();
             btnDot = new Button();
             btnEquals = new Button();
             btnDiv = new Button();
+            eToolStripMenuItem = new ToolStripMenuItem();
+            btnPi = new Button();
+            btnLog = new Button();
+            btnSqrt = new Button();
+            btnx2 = new Button();
+            btnSinh = new Button();
+            btnSin = new Button();
+            btnDec = new Button();
+            btnx3 = new Button();
+            btnCosh = new Button();
+            btnCos = new Button();
+            btnTanh = new Button();
+            btnBin = new Button();
+            btnTan = new Button();
+            btnHex = new Button();
+            btn1x = new Button();
+            btnlnx = new Button();
+            btnExp = new Button();
+            btnMod = new Button();
+            btnOct = new Button();
+            btnPer = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -82,7 +88,7 @@
             txtResult.Location = new Point(12, 49);
             txtResult.Multiline = true;
             txtResult.Name = "txtResult";
-            txtResult.Size = new Size(317, 41);
+            txtResult.Size = new Size(664, 41);
             txtResult.TabIndex = 1;
             txtResult.Text = "0";
             txtResult.TextAlign = HorizontalAlignment.Right;
@@ -93,13 +99,13 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, viewToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(339, 24);
+            menuStrip1.Size = new Size(689, 24);
             menuStrip1.TabIndex = 5;
             menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { standardToolStripMenuItem, scientficToolStripMenuItem, tempratureToolStripMenuItem, unitConversionToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { standardToolStripMenuItem, scientficToolStripMenuItem, tempratureToolStripMenuItem, unitConversionToolStripMenuItem, exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(37, 20);
             fileToolStripMenuItem.Text = "File";
@@ -109,12 +115,14 @@
             standardToolStripMenuItem.Name = "standardToolStripMenuItem";
             standardToolStripMenuItem.Size = new Size(159, 22);
             standardToolStripMenuItem.Text = "Standard";
+            standardToolStripMenuItem.Click += standardToolStripMenuItem_Click;
             // 
             // scientficToolStripMenuItem
             // 
             scientficToolStripMenuItem.Name = "scientficToolStripMenuItem";
             scientficToolStripMenuItem.Size = new Size(159, 22);
             scientficToolStripMenuItem.Text = "Scientfic";
+            scientficToolStripMenuItem.Click += scientficToolStripMenuItem_Click;
             // 
             // tempratureToolStripMenuItem
             // 
@@ -127,6 +135,13 @@
             unitConversionToolStripMenuItem.Name = "unitConversionToolStripMenuItem";
             unitConversionToolStripMenuItem.Size = new Size(159, 22);
             unitConversionToolStripMenuItem.Text = "Unit Conversion";
+            // 
+            // exitToolStripMenuItem
+            // 
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(159, 22);
+            exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // editToolStripMenuItem
             // 
@@ -149,6 +164,7 @@
             btnBS.TabIndex = 6;
             btnBS.Text = "x";
             btnBS.UseVisualStyleBackColor = true;
+            btnBS.Click += btnBS_Click;
             // 
             // btnClearEntry
             // 
@@ -159,6 +175,7 @@
             btnClearEntry.TabIndex = 6;
             btnClearEntry.Text = "CE";
             btnClearEntry.UseVisualStyleBackColor = true;
+            btnClearEntry.Click += btnClearEntry_Click;
             // 
             // btnClear
             // 
@@ -169,6 +186,7 @@
             btnClear.TabIndex = 6;
             btnClear.Text = "C";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // btnPM
             // 
@@ -179,6 +197,7 @@
             btnPM.TabIndex = 6;
             btnPM.Text = "±";
             btnPM.UseVisualStyleBackColor = true;
+            btnPM.Click += btnPM_Click;
             // 
             // btn7
             // 
@@ -222,6 +241,7 @@
             btnAdd.TabIndex = 6;
             btnAdd.Text = "+";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += numberOper;
             // 
             // btn4
             // 
@@ -265,6 +285,7 @@
             btnSub.TabIndex = 6;
             btnSub.Text = "-";
             btnSub.UseVisualStyleBackColor = true;
+            btnSub.Click += numberOper;
             // 
             // btn1
             // 
@@ -308,166 +329,7 @@
             btnMult.TabIndex = 6;
             btnMult.Text = "*";
             btnMult.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            button17.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button17.Location = new Point(347, 105);
-            button17.Name = "button17";
-            button17.Size = new Size(75, 72);
-            button17.TabIndex = 6;
-            button17.Text = "button1";
-            button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            button18.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button18.Location = new Point(428, 105);
-            button18.Name = "button18";
-            button18.Size = new Size(75, 72);
-            button18.TabIndex = 6;
-            button18.Text = "button1";
-            button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            button19.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button19.Location = new Point(347, 183);
-            button19.Name = "button19";
-            button19.Size = new Size(75, 72);
-            button19.TabIndex = 6;
-            button19.Text = "button1";
-            button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            button20.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button20.Location = new Point(428, 183);
-            button20.Name = "button20";
-            button20.Size = new Size(75, 72);
-            button20.TabIndex = 6;
-            button20.Text = "button1";
-            button20.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            button21.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button21.Location = new Point(347, 261);
-            button21.Name = "button21";
-            button21.Size = new Size(75, 72);
-            button21.TabIndex = 6;
-            button21.Text = "button1";
-            button21.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            button22.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button22.Location = new Point(428, 261);
-            button22.Name = "button22";
-            button22.Size = new Size(75, 72);
-            button22.TabIndex = 6;
-            button22.Text = "button1";
-            button22.UseVisualStyleBackColor = true;
-            // 
-            // button23
-            // 
-            button23.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button23.Location = new Point(347, 348);
-            button23.Name = "button23";
-            button23.Size = new Size(75, 72);
-            button23.TabIndex = 6;
-            button23.Text = "button1";
-            button23.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            button24.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button24.Location = new Point(428, 348);
-            button24.Name = "button24";
-            button24.Size = new Size(75, 72);
-            button24.TabIndex = 6;
-            button24.Text = "button1";
-            button24.UseVisualStyleBackColor = true;
-            // 
-            // button25
-            // 
-            button25.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button25.Location = new Point(508, 105);
-            button25.Name = "button25";
-            button25.Size = new Size(75, 72);
-            button25.TabIndex = 6;
-            button25.Text = "button1";
-            button25.UseVisualStyleBackColor = true;
-            // 
-            // button26
-            // 
-            button26.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button26.Location = new Point(508, 183);
-            button26.Name = "button26";
-            button26.Size = new Size(75, 72);
-            button26.TabIndex = 6;
-            button26.Text = "button1";
-            button26.UseVisualStyleBackColor = true;
-            // 
-            // button27
-            // 
-            button27.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button27.Location = new Point(508, 261);
-            button27.Name = "button27";
-            button27.Size = new Size(75, 72);
-            button27.TabIndex = 6;
-            button27.Text = "button1";
-            button27.UseVisualStyleBackColor = true;
-            // 
-            // button28
-            // 
-            button28.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button28.Location = new Point(508, 348);
-            button28.Name = "button28";
-            button28.Size = new Size(75, 72);
-            button28.TabIndex = 6;
-            button28.Text = "button1";
-            button28.UseVisualStyleBackColor = true;
-            // 
-            // button29
-            // 
-            button29.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button29.Location = new Point(589, 105);
-            button29.Name = "button29";
-            button29.Size = new Size(75, 72);
-            button29.TabIndex = 6;
-            button29.Text = "button1";
-            button29.UseVisualStyleBackColor = true;
-            // 
-            // button30
-            // 
-            button30.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button30.Location = new Point(589, 183);
-            button30.Name = "button30";
-            button30.Size = new Size(75, 72);
-            button30.TabIndex = 6;
-            button30.Text = "button1";
-            button30.UseVisualStyleBackColor = true;
-            // 
-            // button31
-            // 
-            button31.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button31.Location = new Point(589, 261);
-            button31.Name = "button31";
-            button31.Size = new Size(75, 72);
-            button31.TabIndex = 6;
-            button31.Text = "button1";
-            button31.UseVisualStyleBackColor = true;
-            // 
-            // button32
-            // 
-            button32.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button32.Location = new Point(589, 348);
-            button32.Name = "button32";
-            button32.Size = new Size(75, 72);
-            button32.TabIndex = 6;
-            button32.Text = "button1";
-            button32.UseVisualStyleBackColor = true;
+            btnMult.Click += numberOper;
             // 
             // btn0
             // 
@@ -500,6 +362,7 @@
             btnEquals.TabIndex = 6;
             btnEquals.Text = "=";
             btnEquals.UseVisualStyleBackColor = true;
+            btnEquals.Click += btnEquals_Click;
             // 
             // btnDiv
             // 
@@ -510,46 +373,269 @@
             btnDiv.TabIndex = 6;
             btnDiv.Text = "/";
             btnDiv.UseVisualStyleBackColor = true;
+            btnDiv.Click += numberOper;
+            // 
+            // eToolStripMenuItem
+            // 
+            eToolStripMenuItem.Name = "eToolStripMenuItem";
+            eToolStripMenuItem.Size = new Size(32, 19);
+            // 
+            // btnPi
+            // 
+            btnPi.Font = new Font("Calibri", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPi.Location = new Point(358, 105);
+            btnPi.Name = "btnPi";
+            btnPi.Size = new Size(75, 72);
+            btnPi.TabIndex = 6;
+            btnPi.Text = "π";
+            btnPi.UseVisualStyleBackColor = true;
+            btnPi.Click += btnPi_Click;
+            // 
+            // btnLog
+            // 
+            btnLog.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLog.Location = new Point(439, 105);
+            btnLog.Name = "btnLog";
+            btnLog.Size = new Size(75, 72);
+            btnLog.TabIndex = 6;
+            btnLog.Text = "Log";
+            btnLog.UseVisualStyleBackColor = true;
+            btnLog.Click += btnLog_Click;
+            // 
+            // btnSqrt
+            // 
+            btnSqrt.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSqrt.Location = new Point(520, 105);
+            btnSqrt.Name = "btnSqrt";
+            btnSqrt.Size = new Size(75, 72);
+            btnSqrt.TabIndex = 6;
+            btnSqrt.Text = "Sqrt";
+            btnSqrt.UseVisualStyleBackColor = true;
+            btnSqrt.Click += btnSqrt_Click;
+            // 
+            // btnx2
+            // 
+            btnx2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnx2.Location = new Point(601, 105);
+            btnx2.Name = "btnx2";
+            btnx2.Size = new Size(75, 72);
+            btnx2.TabIndex = 6;
+            btnx2.Text = "x²";
+            btnx2.UseVisualStyleBackColor = true;
+            btnx2.Click += btnSin_Click;
+            // 
+            // btnSinh
+            // 
+            btnSinh.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSinh.Location = new Point(358, 183);
+            btnSinh.Name = "btnSinh";
+            btnSinh.Size = new Size(75, 72);
+            btnSinh.TabIndex = 6;
+            btnSinh.Text = "Sinh";
+            btnSinh.UseVisualStyleBackColor = true;
+            btnSinh.Click += btnSinh_Click;
+            // 
+            // btnSin
+            // 
+            btnSin.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSin.Location = new Point(439, 183);
+            btnSin.Name = "btnSin";
+            btnSin.Size = new Size(75, 72);
+            btnSin.TabIndex = 6;
+            btnSin.Text = "Sin";
+            btnSin.UseVisualStyleBackColor = true;
+            btnSin.Click += btnSin_Click_1;
+            // 
+            // btnDec
+            // 
+            btnDec.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDec.Location = new Point(520, 183);
+            btnDec.Name = "btnDec";
+            btnDec.Size = new Size(75, 72);
+            btnDec.TabIndex = 6;
+            btnDec.Text = "Dec";
+            btnDec.UseVisualStyleBackColor = true;
+            // 
+            // btnx3
+            // 
+            btnx3.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnx3.Location = new Point(601, 183);
+            btnx3.Name = "btnx3";
+            btnx3.Size = new Size(75, 72);
+            btnx3.TabIndex = 6;
+            btnx3.Text = "x³";
+            btnx3.UseVisualStyleBackColor = true;
+            btnx3.Click += btnx3_Click;
+            // 
+            // btnCosh
+            // 
+            btnCosh.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCosh.Location = new Point(358, 261);
+            btnCosh.Name = "btnCosh";
+            btnCosh.Size = new Size(75, 72);
+            btnCosh.TabIndex = 6;
+            btnCosh.Text = "Cosh";
+            btnCosh.UseVisualStyleBackColor = true;
+            btnCosh.Click += btnCosh_Click;
+            // 
+            // btnCos
+            // 
+            btnCos.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCos.Location = new Point(439, 261);
+            btnCos.Name = "btnCos";
+            btnCos.Size = new Size(75, 72);
+            btnCos.TabIndex = 6;
+            btnCos.Text = "Cos";
+            btnCos.UseVisualStyleBackColor = true;
+            btnCos.Click += btnCos_Click;
+            // 
+            // btnTanh
+            // 
+            btnTanh.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTanh.Location = new Point(358, 339);
+            btnTanh.Name = "btnTanh";
+            btnTanh.Size = new Size(75, 72);
+            btnTanh.TabIndex = 6;
+            btnTanh.Text = "Tanh";
+            btnTanh.UseVisualStyleBackColor = true;
+            btnTanh.Click += btnTanh_Click;
+            // 
+            // btnBin
+            // 
+            btnBin.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBin.Location = new Point(520, 261);
+            btnBin.Name = "btnBin";
+            btnBin.Size = new Size(75, 72);
+            btnBin.TabIndex = 6;
+            btnBin.Text = "Bin";
+            btnBin.UseVisualStyleBackColor = true;
+            // 
+            // btnTan
+            // 
+            btnTan.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTan.Location = new Point(439, 339);
+            btnTan.Name = "btnTan";
+            btnTan.Size = new Size(75, 72);
+            btnTan.TabIndex = 6;
+            btnTan.Text = "Tan";
+            btnTan.UseVisualStyleBackColor = true;
+            btnTan.Click += btnTan_Click;
+            // 
+            // btnHex
+            // 
+            btnHex.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHex.Location = new Point(520, 339);
+            btnHex.Name = "btnHex";
+            btnHex.Size = new Size(75, 72);
+            btnHex.TabIndex = 6;
+            btnHex.Text = "Hex";
+            btnHex.UseVisualStyleBackColor = true;
+            // 
+            // btn1x
+            // 
+            btn1x.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btn1x.Location = new Point(601, 261);
+            btn1x.Name = "btn1x";
+            btn1x.Size = new Size(75, 72);
+            btn1x.TabIndex = 6;
+            btn1x.Text = "1/x";
+            btn1x.UseVisualStyleBackColor = true;
+            // 
+            // btnlnx
+            // 
+            btnlnx.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnlnx.Location = new Point(601, 339);
+            btnlnx.Name = "btnlnx";
+            btnlnx.Size = new Size(75, 72);
+            btnlnx.TabIndex = 6;
+            btnlnx.Text = "ln x";
+            btnlnx.UseVisualStyleBackColor = true;
+            // 
+            // btnExp
+            // 
+            btnExp.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExp.Location = new Point(358, 417);
+            btnExp.Name = "btnExp";
+            btnExp.Size = new Size(75, 72);
+            btnExp.TabIndex = 6;
+            btnExp.Text = "Exp";
+            btnExp.UseVisualStyleBackColor = true;
+            btnExp.Click += numberOper;
+            // 
+            // btnMod
+            // 
+            btnMod.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMod.Location = new Point(439, 417);
+            btnMod.Name = "btnMod";
+            btnMod.Size = new Size(75, 72);
+            btnMod.TabIndex = 6;
+            btnMod.Text = "Mod";
+            btnMod.UseVisualStyleBackColor = true;
+            btnMod.Click += numberOper;
+            // 
+            // btnOct
+            // 
+            btnOct.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnOct.Location = new Point(520, 417);
+            btnOct.Name = "btnOct";
+            btnOct.Size = new Size(75, 72);
+            btnOct.TabIndex = 6;
+            btnOct.Text = "Oct";
+            btnOct.UseVisualStyleBackColor = true;
+            // 
+            // btnPer
+            // 
+            btnPer.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPer.Location = new Point(601, 417);
+            btnPer.Name = "btnPer";
+            btnPer.Size = new Size(75, 72);
+            btnPer.TabIndex = 6;
+            btnPer.Text = "%";
+            btnPer.UseVisualStyleBackColor = true;
             // 
             // Calculator
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(339, 492);
-            Controls.Add(button32);
+            ClientSize = new Size(689, 496);
             Controls.Add(btnDiv);
             Controls.Add(btnMult);
-            Controls.Add(button31);
             Controls.Add(btnSub);
-            Controls.Add(button30);
             Controls.Add(btnAdd);
-            Controls.Add(button29);
+            Controls.Add(btnPer);
+            Controls.Add(btnlnx);
+            Controls.Add(btnx3);
+            Controls.Add(btn1x);
+            Controls.Add(btnx2);
+            Controls.Add(btnOct);
+            Controls.Add(btnHex);
+            Controls.Add(btnDec);
+            Controls.Add(btnMod);
+            Controls.Add(btnTan);
+            Controls.Add(btnSin);
+            Controls.Add(btnBin);
+            Controls.Add(btnSqrt);
+            Controls.Add(btnExp);
+            Controls.Add(btnTanh);
+            Controls.Add(btnCos);
+            Controls.Add(btnSinh);
+            Controls.Add(btnCosh);
+            Controls.Add(btnLog);
+            Controls.Add(btnPi);
             Controls.Add(btnPM);
-            Controls.Add(button28);
             Controls.Add(btnEquals);
             Controls.Add(btn3);
-            Controls.Add(button27);
             Controls.Add(btn6);
-            Controls.Add(button26);
             Controls.Add(btn9);
-            Controls.Add(button25);
             Controls.Add(btnClear);
             Controls.Add(btnDot);
-            Controls.Add(button24);
             Controls.Add(btn2);
             Controls.Add(btn0);
-            Controls.Add(button23);
             Controls.Add(btn1);
-            Controls.Add(button22);
             Controls.Add(btn5);
-            Controls.Add(button21);
             Controls.Add(btn4);
-            Controls.Add(button20);
-            Controls.Add(button19);
             Controls.Add(btn8);
-            Controls.Add(button18);
             Controls.Add(btn7);
-            Controls.Add(button17);
             Controls.Add(btnClearEntry);
             Controls.Add(btnBS);
             Controls.Add(txtResult);
@@ -567,11 +653,6 @@
         #endregion
         private TextBox txtResult;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem fileToolStripMenuItem;
-        private ToolStripMenuItem standardToolStripMenuItem;
-        private ToolStripMenuItem scientficToolStripMenuItem;
-        private ToolStripMenuItem tempratureToolStripMenuItem;
-        private ToolStripMenuItem unitConversionToolStripMenuItem;
         private ToolStripMenuItem editToolStripMenuItem;
         private ToolStripMenuItem viewToolStripMenuItem;
         private Button btnBS;
@@ -590,25 +671,36 @@
         private Button btn2;
         private Button btn3;
         private Button btnMult;
-        private Button button17;
-        private Button button18;
-        private Button button19;
-        private Button button20;
-        private Button button21;
-        private Button button22;
-        private Button button23;
-        private Button button24;
-        private Button button25;
-        private Button button26;
-        private Button button27;
-        private Button button28;
-        private Button button29;
-        private Button button30;
-        private Button button31;
-        private Button button32;
         private Button btn0;
         private Button btnDot;
         private Button btnEquals;
         private Button btnDiv;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem standardToolStripMenuItem;
+        private ToolStripMenuItem scientficToolStripMenuItem;
+        private ToolStripMenuItem tempratureToolStripMenuItem;
+        private ToolStripMenuItem unitConversionToolStripMenuItem;
+        private ToolStripMenuItem eToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private Button btnPi;
+        private Button btnLog;
+        private Button btnSqrt;
+        private Button btnx2;
+        private Button btnSinh;
+        private Button btnSin;
+        private Button btnDec;
+        private Button btnx3;
+        private Button btnCosh;
+        private Button btnCos;
+        private Button btnTanh;
+        private Button btnBin;
+        private Button btnTan;
+        private Button btnHex;
+        private Button btn1x;
+        private Button btnlnx;
+        private Button btnExp;
+        private Button btnMod;
+        private Button btnOct;
+        private Button btnPer;
     }
 }
